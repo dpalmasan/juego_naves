@@ -19,7 +19,7 @@ $(OBJS):
 	g++ -IC:/SDL-1.2.15/include -c $(SRC)
 
 $(EXE): $(OBJS)
-	g++ -LC:/SDL-1.2.15/lib -o $@ main.o simplegui.o gamesprites.o timer.o $(LIBS)
+	g++ -LC:/SDL-1.2.15/lib -o $@ $(OBJS) $(LIBS)
 	
 clean:
 	rm -rf *.o $(EXE).exe
